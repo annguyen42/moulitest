@@ -6,8 +6,9 @@
 		mt_assert(ft_atoi(tested_str) == atoi(tested_str)); \
 	}
 
-mt_test_atoi(num1, " -sfecf");
-mt_test_atoi(num2, "");
+mt_test_atoi(num0, "42");
+mt_test_atoi(num1, "");
+mt_test_atoi(num2, " -sfecf");
 mt_test_atoi(num3, "+2798");
 mt_test_atoi(num4, "+0089");
 mt_test_atoi(num5, "a56");
@@ -41,6 +42,7 @@ mt_test_atoi(num32, "2147483647");
 
 void	suite_00_part1_ft_atoi(t_suite *suite)
 {
+	SUITE_ADD_TEST(suite, test_num0);
 	SUITE_ADD_TEST(suite, test_num1);
 	SUITE_ADD_TEST(suite, test_num2);
 	SUITE_ADD_TEST(suite, test_num3);
